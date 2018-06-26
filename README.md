@@ -84,3 +84,33 @@ json格式校验
 ```
 
 ## v2
+
+### schema
+
+```json
+{
+    "objects": {
+        "com.youzan.ebiz.trade.api.manage.detail.dto.req.OrderResultDTO": {
+            "mainOrderInfo": "com.youzan.ebiz.trade.api.manage.detail.dto.res.MainOrderInfoDTO",
+            "itemInfo": "list:com.youzan.ebiz.trade.api.manage.detail.dto.res.ItemInfoDTO"
+        },
+        "com.youzan.ebiz.trade.api.manage.detail.dto.res.MainOrderInfoDTO": {
+            "orderId": "number",
+            "kdtId": "number",
+            "orderNo": "string",
+            "progressBar": "list:com.youzan.ebiz.trade.api.manage.detail.dto.order.ProgressBar"
+        },
+        "com.youzan.ebiz.trade.api.manage.detail.dto.order.ProgressBar": {
+            "type": "string",
+            "state": "number",
+            "isArrive": "boolean"
+        },
+        "com.youzan.ebiz.trade.api.manage.detail.dto.res.ItemInfoDTO": {
+            "orderNo": "string",
+            "originUnitPrice": "number",
+            "tags": "map"
+        }
+    },
+    "schema": "com.youzan.ebiz.trade.api.manage.detail.dto.req.OrderResultDTO"
+}
+```
